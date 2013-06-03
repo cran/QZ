@@ -16,7 +16,7 @@
 \details{
   See 'dgees.f' for all details.
 
-  DGEES computes for an N-by-N real nonsymmetric matrix A, the
+  DGEES computes for an N-by-N real non-symmetric matrix A, the
   eigenvalues, the real Schur form T, and, optionally, the matrix of
   Schur vectors Q.  This gives the Schur factorization A = Q*T*(Q**T).
 

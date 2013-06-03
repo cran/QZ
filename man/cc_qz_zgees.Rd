@@ -15,7 +15,7 @@
 \details{
   See 'zgees.f' for all details.
 
-  ZGEES computes for an N-by-N complex nonsymmetric matrix A, the
+  ZGEES computes for an N-by-N complex non-symmetric matrix A, the
   eigenvalues, the Schur form T, and, optionally, the matrix of Schur
   vectors Q.  This gives the Schur factorization A = Q*T*(Q**H).
 

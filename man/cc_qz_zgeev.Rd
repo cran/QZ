@@ -16,7 +16,7 @@
 \details{
   See 'zgeev.f' for all details.
 
-  ZGEEV computes for an N-by-N complex nonsymmetric matrix A, the
+  ZGEEV computes for an N-by-N complex non-symmetric matrix A, the
   eigenvalues and, optionally, the left and/or right eigenvectors.
 
   The right eigenvector v(j) of A satisfies

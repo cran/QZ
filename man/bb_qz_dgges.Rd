@@ -17,7 +17,7 @@
 \details{
   See 'dgges.f' for all details.
 
-  DGGES computes for a pair of N-by-N real nonsymmetric matrices (A,B),
+  DGGES computes for a pair of N-by-N real non-symmetric matrices (A,B),
   the generalized eigenvalues, the generalized real Schur form (S,T),
   optionally, the left and/or right matrices of Schur vectors (VSL and
   VSR). This gives the generalized Schur factorization

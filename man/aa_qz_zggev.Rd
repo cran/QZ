@@ -17,7 +17,7 @@
 \details{
   See 'zggev.f' for all details.
 
-  ZGGEV computes for a pair of N-by-N complex nonsymmetric matrices
+  ZGGEV computes for a pair of N-by-N complex non-symmetric matrices
   (A,B), the generalized eigenvalues, and optionally, the left and/or
   right generalized eigenvectors.
 

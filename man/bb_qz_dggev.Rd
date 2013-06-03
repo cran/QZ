@@ -17,7 +17,7 @@
 \details{
   See 'dggev.f' for all details.
 
-  DGGEV computes for a pair of N-by-N real nonsymmetric matrices (A,B)
+  DGGEV computes for a pair of N-by-N real non-symmetric matrices (A,B)
   the generalized eigenvalues, and optionally, the left and/or right
   generalized eigenvectors.
 

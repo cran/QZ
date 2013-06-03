@@ -16,7 +16,7 @@
 \details{
   See 'dgeev.f' for all details.
 
-  DGEEV computes for an N-by-N real nonsymmetric matrix A, the
+  DGEEV computes for an N-by-N real non-symmetric matrix A, the
   eigenvalues and, optionally, the left and/or right eigenvectors.
 
   The right eigenvector v(j) of A satisfies

@@ -4,7 +4,7 @@
 \title{Generalized Eigenvalues and QZ Decomposition}
 \description{
   QZ package provides generalized eigenvalues and QZ decomposition
-  (generalized Schur form) for an N-by-N nonsymmetric
+  (generalized Schur form) for an N-by-N non-symmetric
   matrix A or paired matrices (A,B) with eigenvalues reordering
   mechanism. The package is mainly based complex*16 and double
   precision of LAPACK library (version 3.4.2.)
@@ -20,7 +20,7 @@
 }
 
   The QZ package contains R functions for generalized eigenvalues and
-  QZ decomposition (generalized Schur form) for an N-by-N nonsymmetric
+  QZ decomposition (generalized Schur form) for an N-by-N non-symmetric
   matrix A or paired matrices (A,B) via two main functions, \code{qz.geigen()}
   and \code{qz()}. The \code{qz()} function also provides an option for
   eigenvalues reordering.

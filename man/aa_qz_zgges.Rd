@@ -17,7 +17,7 @@
 \details{
   See 'zgges.f' for all details.
 
-  ZGGES computes for a pair of N-by-N complex nonsymmetric matrices
+  ZGGES computes for a pair of N-by-N complex non-symmetric matrices
   (A,B), the generalized eigenvalues, the generalized complex Schur
   form (S, T), and optionally left and/or right Schur vectors (VSL
   and VSR). This gives the generalized Schur factorization
