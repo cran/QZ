@@ -65,7 +65,7 @@
 *  Arguments
 *  =========
 *
-*  TRANS   (input) CHARACTER*1
+*  TRANS   (input) CHARACTER  
 *          = 'N': solve the generalized sylvester equation (1).
 *          = 'C': solve the "conjugate transposed" system (3).
 *

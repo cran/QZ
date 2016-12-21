@@ -45,11 +45,11 @@
 *  Arguments
 *  =========
 *
-*  JOBVL   (input) CHARACTER*1
+*  JOBVL   (input) CHARACTER  
 *          = 'N':  do not compute the left generalized eigenvectors;
 *          = 'V':  compute the left generalized eigenvectors.
 *
-*  JOBVR   (input) CHARACTER*1
+*  JOBVR   (input) CHARACTER  
 *          = 'N':  do not compute the right generalized eigenvectors;
 *          = 'V':  compute the right generalized eigenvectors.
 *

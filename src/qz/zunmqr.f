@@ -34,11 +34,11 @@
 *  Arguments
 *  =========
 *
-*  SIDE    (input) CHARACTER*1
+*  SIDE    (input) CHARACTER  
 *          = 'L': apply Q or Q**H from the Left;
 *          = 'R': apply Q or Q**H from the Right.
 *
-*  TRANS   (input) CHARACTER*1
+*  TRANS   (input) CHARACTER  
 *          = 'N':  No transpose, apply Q;
 *          = 'C':  Conjugate transpose, apply Q**H.
 *

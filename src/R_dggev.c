@@ -10,6 +10,7 @@ SEXP R_dggev(SEXP JOBVL, SEXP JOBVR, SEXP N,
 		SEXP INFO){
 	int n = INTEGER(N)[0], total_length;
 	SEXP S, T;
+	char CS_JOBVL = CHARPT(JOBVL, 0)[0], CS_JOBVR = CHARPT(JOBVR, 0)[0];
 
 	/* Protect R objects. */
 	PROTECT(S = allocMatrix(REALSXP, n, n));
@@ -21,13 +22,41 @@ SEXP R_dggev(SEXP JOBVL, SEXP JOBVR, SEXP N,
 	Memcpy(REAL(T), REAL(B), total_length);
 
 	/* Call Fortran. */
-	F77_CALL(dggev)(CHARPT(JOBVL, 0), CHARPT(JOBVR, 0),
-		INTEGER(N), REAL(S), INTEGER(LDA),
-		REAL(T), INTEGER(LDB),
-		REAL(ALPHAR), REAL(ALPHAI), REAL(BETA),
-		REAL(VL), INTEGER(LDVL), REAL(VR), INTEGER(LDVR),
-		REAL(WORK), INTEGER(LWORK),
-		INTEGER(INFO));
+	if(CS_JOBVL == 'V' && CS_JOBVR == 'V'){
+		F77_CALL(dggev)("V", "V",
+			INTEGER(N), REAL(S), INTEGER(LDA),
+			REAL(T), INTEGER(LDB),
+			REAL(ALPHAR), REAL(ALPHAI), REAL(BETA),
+			REAL(VL), INTEGER(LDVL), REAL(VR), INTEGER(LDVR),
+			REAL(WORK), INTEGER(LWORK),
+			INTEGER(INFO));
+	} else if(CS_JOBVL == 'N' && CS_JOBVR == 'V'){
+		F77_CALL(dggev)("N", "V",
+			INTEGER(N), REAL(S), INTEGER(LDA),
+			REAL(T), INTEGER(LDB),
+			REAL(ALPHAR), REAL(ALPHAI), REAL(BETA),
+			REAL(VL), INTEGER(LDVL), REAL(VR), INTEGER(LDVR),
+			REAL(WORK), INTEGER(LWORK),
+			INTEGER(INFO));
+	} else if(CS_JOBVL == 'V' && CS_JOBVR == 'N'){
+		F77_CALL(dggev)("V", "N",
+			INTEGER(N), REAL(S), INTEGER(LDA),
+			REAL(T), INTEGER(LDB),
+			REAL(ALPHAR), REAL(ALPHAI), REAL(BETA),
+			REAL(VL), INTEGER(LDVL), REAL(VR), INTEGER(LDVR),
+			REAL(WORK), INTEGER(LWORK),
+			INTEGER(INFO));
+	} else if(CS_JOBVL == 'N' && CS_JOBVR == 'N'){
+		F77_CALL(dggev)("N", "N",
+			INTEGER(N), REAL(S), INTEGER(LDA),
+			REAL(T), INTEGER(LDB),
+			REAL(ALPHAR), REAL(ALPHAI), REAL(BETA),
+			REAL(VL), INTEGER(LDVL), REAL(VR), INTEGER(LDVR),
+			REAL(WORK), INTEGER(LWORK),
+			INTEGER(INFO));
+	} else{
+		REprintf("Input (CHARACTER) types are not implemented.\n");
+	}
 
 	/* Return. */
 	UNPROTECT(2);

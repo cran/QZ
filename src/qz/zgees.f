@@ -37,11 +37,11 @@
 *  Arguments
 *  =========
 *
-*  JOBVS   (input) CHARACTER*1
+*  JOBVS   (input) CHARACTER  
 *          = 'N': Schur vectors are not computed;
 *          = 'V': Schur vectors are computed.
 *
-*  SORT    (input) CHARACTER*1
+*  SORT    (input) CHARACTER  
 *          Specifies whether or not to order the eigenvalues on the
 *          diagonal of the Schur form.
 *          = 'N': Eigenvalues are not ordered:

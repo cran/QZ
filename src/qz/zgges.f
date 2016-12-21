@@ -56,15 +56,15 @@
 *  Arguments
 *  =========
 *
-*  JOBVSL  (input) CHARACTER*1
+*  JOBVSL  (input) CHARACTER  
 *          = 'N':  do not compute the left Schur vectors;
 *          = 'V':  compute the left Schur vectors.
 *
-*  JOBVSR  (input) CHARACTER*1
+*  JOBVSR  (input) CHARACTER  
 *          = 'N':  do not compute the right Schur vectors;
 *          = 'V':  compute the right Schur vectors.
 *
-*  SORT    (input) CHARACTER*1
+*  SORT    (input) CHARACTER  
 *          Specifies whether or not to order the eigenvalues on the
 *          diagonal of the generalized Schur form.
 *          = 'N':  Eigenvalues are not ordered;

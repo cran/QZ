@@ -33,7 +33,7 @@
 *  Arguments
 *  =========
 *
-*  JOB     (input) CHARACTER*1
+*  JOB     (input) CHARACTER  
 *          Specifies whether condition numbers are required for the
 *          cluster of eigenvalues (S) or the invariant subspace (SEP):
 *          = 'N': none;
@@ -42,7 +42,7 @@
 *          = 'B': for both eigenvalues and invariant subspace (S and
 *                 SEP).
 *
-*  COMPQ   (input) CHARACTER*1
+*  COMPQ   (input) CHARACTER  
 *          = 'V': update the matrix Q of Schur vectors;
 *          = 'N': do not update Q.
 *

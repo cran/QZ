@@ -67,18 +67,18 @@
 *  Arguments
 *  =========
 *
-*  JOB     (input) CHARACTER*1
+*  JOB     (input) CHARACTER  
 *          = 'E': Compute eigenvalues only;
 *          = 'S': Computer eigenvalues and the Schur form.
 *
-*  COMPQ   (input) CHARACTER*1
+*  COMPQ   (input) CHARACTER  
 *          = 'N': Left Schur vectors (Q) are not computed;
 *          = 'I': Q is initialized to the unit matrix and the matrix Q
 *                 of left Schur vectors of (H,T) is returned;
 *          = 'V': Q must contain a unitary matrix Q1 on entry and
 *                 the product Q1*Q is returned.
 *
-*  COMPZ   (input) CHARACTER*1
+*  COMPZ   (input) CHARACTER  
 *          = 'N': Right Schur vectors (Z) are not computed;
 *          = 'I': Q is initialized to the unit matrix and the matrix Z
 *                 of right Schur vectors of (H,T) is returned;
