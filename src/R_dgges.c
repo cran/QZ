@@ -10,13 +10,13 @@ SEXP R_dgges(SEXP JOBVSL, SEXP JOBVSR, SEXP SORT, SEXP SELCTG, SEXP N,
 		SEXP A, SEXP LDA, SEXP B, SEXP LDB, SEXP SDIM,
 		SEXP ALPHAR, SEXP ALPHAI,
 		SEXP BETA, SEXP VSL, SEXP LDVSL, SEXP VSR,
-		SEXP LDVSR, SEXP WORK, SEXP LWORK, SEXP BWORK,
+		SEXP LDVSR, SEXP WORK, SEXP LWORK, SEXP IBWORK,
 		SEXP INFO){
 	int n = INTEGER(N)[0], total_length;
 	SEXP RET, RET_NAMES, S, T;
 	char CS_JOBVSL = CHARPT(JOBVSL, 0)[0], CS_JOBVSR = CHARPT(JOBVSR, 0)[0],
 		CS_SORT = CHARPT(SORT, 0)[0];
-	int CF_wrap;
+	int CF_iwrap;
 
 	/* Protect R objects. */
 	PROTECT(RET = allocVector(VECSXP, 2));
@@ -37,22 +37,22 @@ SEXP R_dgges(SEXP JOBVSL, SEXP JOBVSR, SEXP SORT, SEXP SELCTG, SEXP N,
 
 	/* Call Fortran. */
 	if(CS_JOBVSL == 'V' && CS_JOBVSR == 'V' && CS_SORT == 'N'){
-		CF_wrap = 0;
+		CF_iwrap = 0;
 	} else if(CS_JOBVSL == 'N' && CS_JOBVSR == 'V' && CS_SORT == 'N'){
-		CF_wrap = 1;
+		CF_iwrap = 1;
 	} else if(CS_JOBVSL == 'V' && CS_JOBVSR == 'N' && CS_SORT == 'N'){
-		CF_wrap = 2;
+		CF_iwrap = 2;
 	} else if(CS_JOBVSL == 'N' && CS_JOBVSR == 'N' && CS_SORT == 'N'){
-		CF_wrap = 3;
+		CF_iwrap = 3;
 	} else{
 		REprintf("Input (CHARACTER) types are not implemented.\n");
 	}
-	F77_CALL(wdgges)(&CF_wrap,
+	F77_CALL(wdgges)(&CF_iwrap,
 		fake_selctg, INTEGER(N), REAL(S), INTEGER(LDA),
 		REAL(T), INTEGER(LDB), INTEGER(SDIM),
 		REAL(ALPHAR), REAL(ALPHAI), REAL(BETA), REAL(VSL),
 		INTEGER(LDVSL), REAL(VSR), INTEGER(LDVSR), REAL(WORK),
-		INTEGER(LWORK), INTEGER(BWORK), INTEGER(INFO));
+		INTEGER(LWORK), INTEGER(IBWORK), INTEGER(INFO));
 
 	/* Return. */
 	UNPROTECT(4);

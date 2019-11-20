@@ -2,14 +2,14 @@
 
 #include "R_qz_global.h"
 
-SEXP R_dtrsen(SEXP JOB, SEXP COMPQ, SEXP SELECT,
+SEXP R_dtrsen(SEXP JOB, SEXP COMPQ, SEXP ISELECT,
 		SEXP N, SEXP T, SEXP LDT, SEXP Q, SEXP LDQ,
 		SEXP WR, SEXP WI, SEXP M, SEXP S, SEXP SEP,
 		SEXP WORK, SEXP LWORK, SEXP IWORK, SEXP LIWORK, SEXP INFO){
 	int n = INTEGER(N)[0], total_length;
 	SEXP RET, RET_NAMES, T_OUT, Q_OUT;
 	char CS_JOB = CHARPT(JOB, 0)[0], CS_COMPQ = CHARPT(COMPQ, 0)[0];
-	int CF_wrap;
+	int CF_iwrap;
 
 	/* Protect R objects. */
 	PROTECT(RET = allocVector(VECSXP, 2));
@@ -30,26 +30,26 @@ SEXP R_dtrsen(SEXP JOB, SEXP COMPQ, SEXP SELECT,
 
 	/* Call Fortran. */
 	if(CS_JOB == 'B' && CS_COMPQ == 'V'){
-		CF_wrap = 0;
+		CF_iwrap = 0;
 	} else if (CS_JOB == 'V' && CS_COMPQ == 'V'){
-		CF_wrap = 1;
+		CF_iwrap = 1;
 	} else if (CS_JOB == 'E' && CS_COMPQ == 'V'){
-		CF_wrap = 2;
+		CF_iwrap = 2;
 	} else if (CS_JOB == 'N' && CS_COMPQ == 'V'){
-		CF_wrap = 3;
+		CF_iwrap = 3;
 	} else if (CS_JOB == 'B' && CS_COMPQ == 'N'){
-		CF_wrap = 4;
+		CF_iwrap = 4;
 	} else if (CS_JOB == 'V' && CS_COMPQ == 'N'){
-		CF_wrap = 5;
+		CF_iwrap = 5;
 	} else if (CS_JOB == 'E' && CS_COMPQ == 'N'){
-		CF_wrap = 6;
+		CF_iwrap = 6;
 	} else if (CS_JOB == 'N' && CS_COMPQ == 'N'){
-		CF_wrap = 7;
+		CF_iwrap = 7;
 	} else{
 		REprintf("Input (CHARACTER) types are not implemented.\n");
 	}
-	F77_CALL(wdtrsen)(&CF_wrap,
-		INTEGER(SELECT), INTEGER(N), REAL(T_OUT), INTEGER(LDT),
+	F77_CALL(wdtrsen)(&CF_iwrap,
+		INTEGER(ISELECT), INTEGER(N), REAL(T_OUT), INTEGER(LDT),
 		REAL(Q_OUT), INTEGER(LDQ), REAL(WR), REAL(WI),
 		INTEGER(M), REAL(S), REAL(SEP),
 		REAL(WORK), INTEGER(LWORK), INTEGER(IWORK),
