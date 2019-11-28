@@ -1,6 +1,6 @@
 Package: QZ
-Version: 0.1-8
-Date: 2019-11-19
+Version: 0.1-9
+Date: 2019-11-21
 Title: Generalized Eigenvalues and QZ Decomposition
 Authors@R: c(person("Wei-Chen", "Chen", role = c("aut", "cre"), email=
     "wccsnow@gmail.com"), person("LAPACK authors", role = c("aut", "cph")))
@@ -19,8 +19,8 @@ Description: Generalized eigenvalues and eigenvectors
 License: Mozilla Public License 2.0
 NeedsCompilation: yes
 Maintainer: Wei-Chen Chen <wccsnow@gmail.com>
-Packaged: 2019-11-20 02:05:32 UTC; snoweye
+Packaged: 2019-11-27 23:38:55 UTC; snoweye
 Author: Wei-Chen Chen [aut, cre],
   LAPACK authors [aut, cph]
 Repository: CRAN
-Date/Publication: 2019-11-20 10:50:02 UTC
+Date/Publication: 2019-11-28 14:40:02 UTC
