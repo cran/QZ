@@ -1,7 +1,7 @@
 e879eaad64aab8e1f8e63e298f5cea28 *COPYING
-55236729dc0036cf1d36667fac3cda13 *ChangeLog
-f373637877e013e96132c0dcc86845c8 *DESCRIPTION
-5d7235ffeaff8aec9b1123a0509c342a *INSTALL
+fc7ec53415478fc478146aa6c580e013 *ChangeLog
+7a3787938b1d70214a711ae6d077933c *DESCRIPTION
+75782db6114368a4326eda23722bbe74 *INSTALL
 ae8a1aaa2c586218ef427f387cd945ec *NAMESPACE
 a6406978c6e4fb9cc6979b72cbbfaa1f *R/qz_dgees.r
 fb3b1c2e7954224a9bb47243fe8d9d62 *R/qz_dgeev.r
@@ -34,7 +34,7 @@ dc9d146a3b90e1fe2a1efac43f86bb92 *data/example_AB.r
 edd6a91136fd50e69d1ff62cbfac4a8d *demo/ex2_qz.r
 186d82ef6b9951bd7b142134f8df61af *demo/ex3_ordqz.r
 92addba129f0ff454ba8bc6b5b95ee1c *demo/ex4_fda_geigen.r
-9d84b3527c16245331d56327765d3829 *inst/CITATION
+0f0212c33c00b4aa9f129bd26a7d96b9 *inst/CITATION
 d2f96430cbbafe6e426e9617aa26a76e *inst/LAPACK_LICENSE.txt
 10a349c96c0259d50273903b26c215bf *inst/doc/QZ-guide.R
 4f08d9419a74ee39420eaa56a679d503 *inst/doc/QZ-guide.Rnw
@@ -56,7 +56,7 @@ b5d24243bbd78e07c5aace1946e31ce3 *inst/ex_verify/exA2_d.r
 0170e92ebd8cabb2f5695e706d9e024e *inst/ex_verify/exAB1_z.r
 2fbb50031ae4482c6b049d1fed47a1dd *inst/ex_verify/exAB2_d.r
 70a88c4d501e88b40018cea867d7bf37 *inst/ex_verify/run_all.sh
-c1e8c84d68e10f289c68e203b536dedd *man/00_QZ-package.Rd
+22947ef1ff90409ffd7955552d8d9078 *man/00_QZ-package.Rd
 8c180e81b52e7adab832cff5e95b06dd *man/11_example.Rd
 e3e935e3677260f26dce1c3f0acb3a0f *man/21_qz_geigen.Rd
 470ec44fb3cbf576799e4d2af81052a4 *man/23_qz.Rd
